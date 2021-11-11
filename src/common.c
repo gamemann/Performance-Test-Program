@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <linux/types.h>
 #include <getopt.h>
+#include <stdlib.h>
+#include <string.h>
+
 #include "common.h"
 
 const struct option opts[] = 
@@ -18,11 +21,13 @@ static void getcmdline(struct cmdline *cmd, int argc, char *argv[])
         switch (c)
         {
             case 'c':
+            {
                 char *val = strdup(optarg);
                 cmd->count = strtoull((const char *)val, (char **)val, 0);
 
                 break;
-
+            }
+            
             default:
                 fprintf(stdout, "Missing argument.\n");
 
