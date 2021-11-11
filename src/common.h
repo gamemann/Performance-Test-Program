@@ -9,5 +9,5 @@ struct cmdline
     __u64 count;
 };
 
-static inline __u32 read_time(void);
-static void getcmdline(struct cmdline *cmd, int argc, char *argv[]);
+__u32 read_time();
+void getcmdline(struct cmdline *cmd, int argc, char *argv[]);

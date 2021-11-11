@@ -12,7 +12,7 @@ const struct option opts[] =
     {NULL, 0, NULL, 0}
 };
 
-static void getcmdline(struct cmdline *cmd, int argc, char *argv[])
+void getcmdline(struct cmdline *cmd, int argc, char *argv[])
 {
     int c = -1;
 
@@ -36,7 +36,7 @@ static void getcmdline(struct cmdline *cmd, int argc, char *argv[])
     }
 }
 
-static inline __u32 read_time(void)
+__u32 read_time()
 {
     __u32 a = 0;
     #if defined(__GNUC__) && (defined(ARCH_X86) || defined(ARCH_X86_64))
