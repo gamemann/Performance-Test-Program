@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
     // Divide average by i.
     avg /= i;
 
-    fprintf(stdout, "%llu calls with a score of %u. Avg score => %u. High score => %u. Low score => %u.\n", i, tot, avg, highest, lowest);
+    fprintf(stdout, "%llu calls with an overall profile time of %u. Avg profile time => %u. Highest profile time => %u. Lowest profile time => %u.\n", i, tot, avg, highest, lowest);
 
     return 0;
 }
