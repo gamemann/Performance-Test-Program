@@ -1,6 +1,6 @@
 # Simple Performance Test
 ## Description
-This is a simple program in C for performance testing which only works for x86 systems. A for loop is executed *x* times and we use the Assembly instruction `rdtsc` for profiling.
+This is a simple program in C for performance testing which only works for x86 and x86_64 systems. A `for` loop is executed *x* times and we use the Assembly instruction `rdtsc` for profiling.
 
 ## Test 1
 Test #1 simply creates a character array with a size of 256 bytes and a string value of "a string" is copied to the character array via `strcpy()`. Afterwards, a variable representing the profiling average along with the highest and lowest profile speeds are calculated.
